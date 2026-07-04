@@ -19,6 +19,19 @@ header {
     padding: 1rem 0 0 0;
 }
 
+main {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto; 
+}
+
+footer {
+    background: #1a5276; 
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
 header h1 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
@@ -64,13 +77,11 @@ nav {
     color: #333;
 }
 
-main, .main-container {
+.main-container {
     display: grid;
     grid-template-columns: 2fr 1fr; 
     gap: 20px;
-    max-width: 1200px;
     width: 95%;
-    margin: 0 auto 2rem auto; 
     flex: 1; 
 }
 
@@ -152,14 +163,6 @@ hr {
 .resources-list a {
     color: blue;
     text-decoration: underline;
-}
-
-footer {
-    background: #1a5276; 
-    color: white;
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 0.9rem;
 }
 
 footer p {
