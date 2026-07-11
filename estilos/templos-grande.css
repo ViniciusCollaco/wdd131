@@ -3,6 +3,12 @@
         display: none;
     }
 
+    nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     .navigation {
         display: flex !important;
         flex-direction: row;
