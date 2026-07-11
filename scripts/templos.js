@@ -1,14 +1,22 @@
 const hamButton = document.querySelector('#menu');
 const navigation = document.querySelector('.navigation');
 
-hamButton.addEventListener('click', () => {
-    navigation.classList.toggle('open');
-    hamButton.classList.toggle('open');
-});
+if (hamButton && navigation) {
+    hamButton.addEventListener('click', () => {
+        navigation.classList.toggle('open');
+        hamButton.classList.toggle('open');
+        
+        const isOpen = hamButton.classList.contains('open');
+        hamButton.setAttribute('aria-expanded', isOpen);
+    });
+}
 
 const anoAtualSpan = document.getElementById("anoatual");
-const anoVigente = new Date().getFullYear();
-anoAtualSpan.textContent = anoVigente;
+if (anoAtualSpan) {
+    anoAtualSpan.textContent = new Date().getFullYear();
+}
 
 const ultimaModificacaoParagrafo = document.getElementById("ultimaModificacao");
-ultimaModificacaoParagrafo.textContent = `Última modificação: ${document.lastModified}`;
+if (ultimaModificacaoParagrafo) {
+    ultimaModificacaoParagrafo.textContent = `Última modificação: ${document.lastModified}`;
+}
