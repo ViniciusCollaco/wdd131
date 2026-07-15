@@ -64,13 +64,18 @@ h1 {
 .navigation a {
     display: block;
     padding: 1rem;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
 }
 
 .navigation a:hover {
     background-color: #078282;
+    color: #ffffff;
+}
+
+.navigation a.active {
+    background-color: #044b4b;
 }
 
 main {
@@ -96,18 +101,23 @@ figure {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 figure img {
     width: 100%;
     height: auto;
+    aspect-ratio: 4 / 3; 
+    object-fit: cover;   
     display: block;
 }
 
 figcaption {
     padding: 0.8rem;
     background-color: #fcfcfc;
+    border-top: 1px solid #eee;
+    text-align: center;
 }
 
 figcaption a {
